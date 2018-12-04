@@ -34,3 +34,4 @@ npm run build
 ## ToDo and Ideas
 
 - Add e2e test for adding a note
+- Put interfaces in styleguide-approved place
