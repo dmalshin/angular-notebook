@@ -43,3 +43,4 @@ npm run build
 
 - Add e2e test for adding a note
 - Put interfaces in styleguide-approved place
+- Add enum check for priority in server
