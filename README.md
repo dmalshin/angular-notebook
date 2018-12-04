@@ -19,6 +19,14 @@ angular6+, angular material 6+
 ## Project setup
 ```
 npm install
+cd server
+npm install
+```
+
+### Starts backend server
+```
+cd server
+npm start
 ```
 
 ### Compiles and hot-reloads for development
