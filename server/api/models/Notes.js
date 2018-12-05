@@ -9,6 +9,7 @@ module.exports = {
     },
     name: {
       type: 'string',
+      required: true,
     },
     priority: {
       type: 'string',
