@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, ViewChild, SimpleChanges } from '@angular/core';
+import { MatPaginator, MatTableDataSource } from '@angular/material';
 import moment from 'moment';
 
 import { Note, Priority } from '../interfaces';
@@ -8,11 +9,23 @@ import { Note, Priority } from '../interfaces';
   templateUrl: './note-list.component.html',
   styleUrls: ['./note-list.component.css']
 })
-export class NoteListComponent {
+export class NoteListComponent implements OnInit, OnChanges {
   @Input() notes: Note[];
   displayedColumns: string[] = ['name', 'priority', 'date'];
+  dataSource = new MatTableDataSource<Note>(this.notes);
 
-  constructor() { }
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+  ngOnInit() {
+    this.dataSource.paginator = this.paginator;
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.notes && changes.notes.currentValue) {
+      this.dataSource = new MatTableDataSource<Note>(changes.notes.currentValue);
+      this.dataSource.paginator = this.paginator;
+    }
+  }
 
   formatDate(date: string): string {
     if (!date) {

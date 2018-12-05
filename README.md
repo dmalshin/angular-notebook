@@ -52,3 +52,5 @@ npm run build
 - Add date string validation
 - Check if webpack imports only one moment locale
 - Add color indicators for priorities
+- Add indications for empty note name field
+- Add hammer.js
