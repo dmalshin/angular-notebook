@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Priority, Note } from '../interfaces';
 import { NoteService } from '../note.service';
 
@@ -9,6 +9,7 @@ import { NoteService } from '../note.service';
   styleUrls: ['./new-note.component.css']
 })
 export class NewNoteComponent implements OnInit {
+  @Output() addNote = new EventEmitter<Note>();
   defaultNote: Note = {
     name: '',
     priority: Priority.NORMAL,
@@ -24,9 +25,7 @@ export class NewNoteComponent implements OnInit {
   add(): void {
     if (!this.note.name.trim()) { return; }
 
-    this.noteService.addNote(this.note as Note)
-      .subscribe(newNote => {
-        this.note = { ...this.defaultNote };
-      });
+    this.addNote.emit(this.note);
+    this.note = { ...this.defaultNote };
   }
 }

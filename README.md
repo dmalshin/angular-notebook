@@ -44,6 +44,6 @@ npm run build
 - Add e2e test for adding a note
 - Put interfaces and configs in styleguide-approved place
 - Add enum check for priority in server
-- Add optimistic updates
+- Add rollback or error message on failed optimistic update
 - Try using default sort for note list
 - Add HTTP errors handling
