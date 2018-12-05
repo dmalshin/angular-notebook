@@ -29,28 +29,31 @@ cd server
 npm start
 ```
 
-### Compiles and hot-reloads for development
+### Compiles and hot-reloads client for development
 ```
 npm start
 ```
 
-### Compiles and minifies for production
+### Compiles and minifies client for production
 ```
 npm run build
 ```
 
 ## ToDo and Ideas
 
+- Read the styleguide and apply it to the app
 - Add e2e test for adding a note
-- Put interfaces and configs in styleguide-approved place
 - Add enum check for priority in server
 - Add rollback or error message on failed optimistic update
-- Try using default sort for note list
 - Add HTTP errors handling
-- Bring back inputs placeholder animation
+- Find out why inputs placeholder animation not working
 - Add russian locale to the datepicker
 - Add date string validation
 - Check if webpack imports only one moment locale
 - Add color indicators for priorities
 - Add indications for empty note name field
 - Add hammer.js
+- Check how the app will behave with zero notes
+- Display date in local timezone
+- Randomize date and priority in generated data
+

@@ -9,3 +9,7 @@
 .NewNote .datepicker {
   max-width: 180px;
 }
+
+.NewNote .name {
+  max-width: 400px;
+}

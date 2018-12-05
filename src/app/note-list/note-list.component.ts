@@ -1,6 +1,6 @@
 import { Component, OnInit, OnChanges, Input, ViewChild, SimpleChanges } from '@angular/core';
 import { MatPaginator, MatTableDataSource } from '@angular/material';
-import moment from 'moment';
+import * as moment from 'moment';
 
 import { Note, Priority } from '../interfaces';
 
