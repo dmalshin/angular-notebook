@@ -1,3 +1,18 @@
-<p>
-  note-list works!
-</p>
+<section class="NoteList">
+  <table>
+    <thead>
+      <tr>
+        <th>Заголовок</th>
+        <th>Приоритет</th>
+        <th>Дата выполнения</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let note of notes">
+        <td>{{note.name}}</td>
+        <td>{{note.priority}}</td>
+        <td>{{note.date}}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>

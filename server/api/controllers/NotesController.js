@@ -13,7 +13,7 @@ module.exports = {
 
   async findAll(req, res) {
     const allNotes = await Notes.find({
-      sort: 'updatedAt',
+      sort: 'updatedAt DESC',
     })
     res.json(allNotes)
   },

@@ -46,3 +46,4 @@ npm run build
 - Add enum check for priority in server
 - Add optimistic updates
 - Try using default sort for note list
+- Add HTTP errors handling

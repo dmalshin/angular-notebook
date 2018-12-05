@@ -10,7 +10,11 @@ import { apiBase } from './config';
 })
 export class NoteService {
 
-  constructor( private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
+
+  getNotes (): Observable<Note[]> {
+    return this.http.get<Note[]>(apiBase);
+  }
 
   addNote (note: Note): Observable<Note> {
     return this.http.post<Note>(apiBase, note);
