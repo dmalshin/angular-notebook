@@ -49,3 +49,6 @@ npm run build
 - Add HTTP errors handling
 - Bring back inputs placeholder animation
 - Add russian locale to the datepicker
+- Add date string validation
+- Check if webpack imports only one moment locale
+- Add color indicators for priorities
