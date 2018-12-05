@@ -4,7 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatButtonModule } from '@angular/material';
+import {
+  MatButtonModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatButtonToggleModule,
+  MatDatepickerModule,
+  MatNativeDateModule
+} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { NewNoteComponent } from './new-note/new-note.component';
@@ -23,7 +30,12 @@ import { NotesContainerComponent } from './notes-container/notes-container.compo
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonToggleModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

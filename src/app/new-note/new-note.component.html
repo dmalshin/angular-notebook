@@ -1,8 +1,19 @@
 <section class="NewNote">
-  <input type="text" [(ngModel)]="note.name" placeholder="Заголовок" />
-  <input type="text" [(ngModel)]="note.priority" placeholder="Приоритет" />
-  <input type="text" [(ngModel)]="note.date" placeholder="Дата выполнения" />
-  <button (click)="add()">
-    Добавить
-  </button>
+  <mat-form-field appearance="standard">
+    <input matInput [(ngModel)]="note.name" placeholder="Заголовок">
+  </mat-form-field>
+
+  <mat-button-toggle-group [(ngModel)]="note.priority" name="priority">
+    <mat-button-toggle value="low">Низкий</mat-button-toggle>
+    <mat-button-toggle value="normal">Нормальный</mat-button-toggle>
+    <mat-button-toggle value="high">Высокий</mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <mat-form-field class="datepicker" appearance="standard">
+    <input matInput [(ngModel)]="note.date" [matDatepicker]="picker" placeholder="Дата выполнения">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <button (click)="add()" mat-raised-button color="primary">Добавить</button>
 </section>

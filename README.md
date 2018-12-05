@@ -47,3 +47,5 @@ npm run build
 - Add rollback or error message on failed optimistic update
 - Try using default sort for note list
 - Add HTTP errors handling
+- Bring back inputs placeholder animation
+- Add russian locale to the datepicker

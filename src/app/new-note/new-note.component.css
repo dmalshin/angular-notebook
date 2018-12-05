@@ -1,0 +1,7 @@
+.NewNote mat-form-field {
+  display: block;
+}
+
+.NewNote .datepicker {
+  max-width: 180px;
+}
