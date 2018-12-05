@@ -1,3 +1,7 @@
+.NewNote {
+  margin-bottom: 50px;
+}
+
 .NewNote mat-form-field {
   display: block;
 }

@@ -10,7 +10,8 @@ import {
   MatInputModule,
   MatButtonToggleModule,
   MatDatepickerModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatTableModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -35,7 +36,8 @@ import { NotesContainerComponent } from './notes-container/notes-container.compo
     MatInputModule,
     MatButtonToggleModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

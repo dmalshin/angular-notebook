@@ -9,6 +9,7 @@ import { Note } from '../interfaces';
 })
 export class NoteListComponent {
   @Input() notes: Note[];
+  displayedColumns: string[] = ['name', 'priority', 'date'];
 
   constructor() { }
 }
